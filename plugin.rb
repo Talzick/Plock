@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 # name: signup-prompt
-# about: Blur posts after the first 3 replies to encourage signup
+# about: Blur posts after the first 3 replies
 # version: 1.1.0
-# authors: YourName
-# url: https://github.com/yourusername/discourse-signup-prompt
+# authors: Chris
+# url: https://github.com/Talzick/Plock
 
 enabled_site_setting :signup_prompt_enabled
 
