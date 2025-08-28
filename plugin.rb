@@ -9,7 +9,6 @@
 enabled_site_setting :signup_prompt_enabled
 
 register_asset 'stylesheets/signup-prompt.scss'
-register_asset 'javascripts/discourse/initializers/signup-prompt.js'
 
 # Server-side restrictions for user profiles
 after_initialize do
