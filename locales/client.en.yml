@@ -1,0 +1,10 @@
+en:
+  js:
+    signup_prompt:
+      title: "Sign In to Unlock All Replies"
+      message: "Log in (or sign up) to unlock "
+      signup_button: "Sign Up"
+      login_button: "Already a member? Log In"
+      hidden_user: "Hidden Member"
+      profile_access_message: "Please sign up or log in to view user profiles."
+      signup_to_see_users: "Sign up to see who's participating in this discussion!"

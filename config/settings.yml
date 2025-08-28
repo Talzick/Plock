@@ -1,0 +1,23 @@
+plugins:
+  signup_prompt_enabled:
+    default: true
+    client: true
+    description: "Enable the signup prompt plugin that blurs posts after the first 3 replies"
+  signup_prompt_blur_after:
+    default: 3
+    client: true
+    description: "Number of replies to show before blurring (not including the original post)"
+  signup_prompt_blur_strength:
+    default: 4
+    client: true
+    min: 1
+    max: 10
+    description: "Strength of the blur effect (1-10)"
+  signup_prompt_hide_usernames:
+    default: true
+    client: true
+    description: "Hide usernames on blurred posts to prevent profile access"
+  signup_prompt_restrict_profiles:
+    default: true
+    client: false
+    description: "Restrict access to user profile pages for non-logged-in users"

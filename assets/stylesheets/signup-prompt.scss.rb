@@ -1,0 +1,111 @@
+.signup-prompt-blur {
+  position: relative;
+
+  .cooked {
+    filter: blur(4px);
+    user-select: none;
+    pointer-events: none;
+  }
+
+  // Hide user information
+  .topic-meta-data {
+    .username,
+    .user-title,
+    .user-status {
+      visibility: hidden;
+      position: relative;
+
+      &::after {
+        content: attr(data-hidden-text);
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--primary-medium);
+        font-style: italic;
+      }
+    }
+
+    // Disable clicking on avatar and username
+    a.trigger-user-card,
+    .avatar,
+    .username a {
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+  }
+
+  // Hide user cards if they somehow appear
+  .user-card {
+    display: none !important;
+  }
+
+  .signup-prompt-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    min-width: 300px;
+
+    .dark-scheme & {
+      background: rgba(0, 0, 0, 0.95);
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+      color: var(--primary);
+      font-size: 1.2em;
+    }
+
+    p {
+      margin: 0 0 15px 0;
+      color: var(--primary-high);
+    }
+
+    .btn-signup {
+      background: var(--tertiary);
+      color: var(--secondary);
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      margin: 0 5px;
+
+      &:hover {
+        background: var(--tertiary-hover);
+        color: var(--secondary);
+      }
+    }
+
+    .btn-login {
+      background: var(--primary-low);
+      color: var(--primary);
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0 5px;
+
+      &:hover {
+        background: var(--primary-low-mid);
+      }
+    }
+  }
+}
+
+// Prevent user profile modal/page access for non-logged users
+body:not(.logged-in) {
+  .user-card,
+  .user-profile-modal,
+  .group-card {
+    display: none !important;
+  }
+}
